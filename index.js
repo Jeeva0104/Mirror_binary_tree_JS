@@ -40,7 +40,15 @@ function swap(node) {
 
   return node;
 }
-
+const print = (node) => {
+    if (node === null) return node
+    if (node && node.value != null) {
+        console.log(node.value)
+    }
+    print(node.left)
+    print(node.right)
+}
+print(root)
 function mirror(tree) {
   const mirrorImage = swap(tree);
   return mirrorImage;
